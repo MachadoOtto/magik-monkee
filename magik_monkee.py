@@ -150,7 +150,7 @@ def main():
 							else:
 								print('[' + RED + 'ERROR' + NOCOLOR + ']: Option is not valid')
 					print('[' + BLUE + 'INFO' + NOCOLOR +']: Generating file with "' + e + '" signature...')
-					applyMagik(args.file_source, e, data[e]['signatures'][opt]['hex'], args.output, args.change_extension)
+					applyMagik(args.file_source, e, data[e]['signatures'][int(opt)]['hex'], args.output, args.change_extension)
 				print('[' + GREEN + 'OK' + NOCOLOR +']: Files successful generated')
 		else:
 			print('[' + RED + 'ERROR' + NOCOLOR + ']: Signatures selected are not valid')
