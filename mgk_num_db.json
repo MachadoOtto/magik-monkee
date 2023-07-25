@@ -1,0 +1,2168 @@
+{
+    "docs": [
+        {
+            "ext": "pdf",
+            "description": "PDF document",
+            "signatures": [
+                {
+                    "hex": "25 50 44 46 2D",
+                    "reference": "%PDF-"
+                }
+            ]
+        },
+        {
+            "ext": "jpg",
+            "description": "JPEG raw or in the JFIF or Exif file format",
+            "signatures": [
+                {
+                    "hex": "FF D8 FF DB",
+                    "reference": "\u00ff\u00d8\u00ff\u00db"
+                },
+                {
+                    "hex": "FF D8 FF E0 00 10 4A 46",
+                    "reference": "\u00ff\u00d8\u00ff\u00e0\u2400\u2410JFIF\u2400\u2401"
+                },
+                {
+                    "hex": "FF D8 FF EE",
+                    "reference": "\u00ff\u00d8\u00ff\u00ee"
+                },
+                {
+                    "hex": "FF D8 FF E0",
+                    "reference": "\u00ff\u00d8\u00ff\u00e0"
+                },
+                {
+                    "hex": "FF D8 FF E1 00 00 45 78",
+                    "reference": "\u00ff\u00d8\u00ff\u00e1??Exif\u2400\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "txt",
+            "description": "Text File",
+            "signatures": [
+                {
+                    "hex": "EF BB BF",
+                    "reference": "UTF-8 byte order mark"
+                },
+                {
+                    "hex": "0E FE FF",
+                    "reference": "SCSU byte order mark for text"
+                },
+                {
+                    "hex": "FF FE",
+                    "reference": "UTF-16LE byte order mark"
+                },
+                {
+                    "hex": "FE FF",
+                    "reference": "UTF-16BE byte order mark"
+                },
+                {
+                    "hex": "FF FE 00 00",
+                    "reference": "UTF-32LE byte order mark for text"
+                },
+                {
+                    "hex": "00 00 FE FF",
+                    "reference": "UTF-32BE byte order mark for text"
+                }
+            ]
+        },
+        {
+            "ext": "png",
+            "description": "Image encoded in the Portable Network Graphics format",
+            "signatures": [
+                {
+                    "hex": "89 50 4E 47 0D 0A 1A 0A",
+                    "reference": "\u2030PNG\u240d\u240a\u241a\u240a"
+                }
+            ]
+        },
+        {
+            "ext": "pcapng",
+            "description": "PCAP Next Generation Dump File Format",
+            "signatures": [
+                {
+                    "hex": "0A 0D 0D 0A",
+                    "reference": "\u240a\u240d\u240d\u240a"
+                }
+            ]
+        },
+        {
+            "ext": "jp2",
+            "description": "JPEG 2000 format",
+            "signatures": [
+                {
+                    "hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A",
+                    "reference": "\u2400\u2400\u2400\u240cjP\u2420\u2420\u240d\u240a\u2021\u240a"
+                },
+                {
+                    "hex": "FF 4F FF 51",
+                    "reference": "\u00ffO\u00ffQ"
+                }
+            ]
+        },
+        {
+            "ext": "gif",
+            "description": "Image file encoded in the Graphics Interchange Format (GIF)",
+            "signatures": [
+                {
+                    "hex": "47 49 46 38 37 61",
+                    "reference": "GIF87a"
+                }
+            ]
+        },
+        {
+            "ext": "exe",
+            "description": "DOS Executable",
+            "signatures": [
+                {
+                    "hex": "4D 5A",
+                    "reference": "DOS MZ executable and its descendants (including NE and PE)"
+                },
+                {
+                    "hex": "5A 4D",
+                    "reference": "DOS ZM executable and its descendants (rare)"
+                }
+            ]
+        },
+        {
+            "ext": "zip",
+            "description": "ZIP file format and formats based on it, such as EPUB, JAR, ODF, OOXML",
+            "signatures": [
+                {
+                    "hex": "50 4B 03 04",
+                    "reference": "PK\u2403\u2404"
+                }
+            ]
+        },
+        {
+            "ext": "7z",
+            "description": "7-Zip File Format",
+            "signatures": [
+                {
+                    "hex": "37 7A BC AF 27 1C",
+                    "reference": "7z\u00bc\u00af'\u241c"
+                }
+            ]
+        },
+        {
+            "ext": "zlib",
+            "description": "ZLib Compression",
+            "signatures": [
+                {
+                    "hex": "78 01",
+                    "reference": "No Compression"
+                },
+                {
+                    "hex": "78 5E",
+                    "reference": "Best speed"
+                },
+                {
+                    "hex": "78 9C",
+                    "reference": "Default Compression"
+                },
+                {
+                    "hex": "78 DA",
+                    "reference": "Best Compression"
+                },
+                {
+                    "hex": "78 20",
+                    "reference": "No Compression (with preset dictionary)"
+                },
+                {
+                    "hex": "78 7D",
+                    "reference": "Best speed (with preset dictionary)"
+                },
+                {
+                    "hex": "78 BB",
+                    "reference": "Default Compression (with preset dictionary)"
+                },
+                {
+                    "hex": "78 F9",
+                    "reference": "Best Compression (with preset dictionary)"
+                }
+            ]
+        },
+        {
+            "ext": "woff",
+            "description": "WOFF File Format 1.0",
+            "signatures": [
+                {
+                    "hex": "77 4F 46 46",
+                    "reference": "wOFF"
+                }
+            ]
+        },
+        {
+            "ext": "woff2",
+            "description": "WOFF File Format 2.0",
+            "signatures": [
+                {
+                    "hex": "77 4F 46 32",
+                    "reference": "wOF2"
+                }
+            ]
+        },
+        {
+            "ext": "bin",
+            "description": "Binary File Format",
+            "signatures": [
+                {
+                    "hex": "53 50 30 31",
+                    "reference": "Amazon Kindle Update Package"
+                }
+            ]
+        },
+        {
+            "ext": "bac",
+            "description": "Backup data file",
+            "signatures": [
+                {
+                    "hex": "42 41 43 4B 4D 49 4B 45",
+                    "reference": "AmiBack Amiga Backup data file"
+                }
+            ]
+        },
+        {
+            "ext": "ico",
+            "description": "Computer icon encoded in ICO file format",
+            "signatures": [
+                {
+                    "hex": "00 00 01 00",
+                    "reference": "\u2400\u2400\u2401\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "pcap",
+            "description": "Libpcap File Format",
+            "signatures": [
+                {
+                    "hex": "D4 C3 B2 A1",
+                    "reference": "Little-endian"
+                },
+                {
+                    "hex": "A1 B2 C3 D4",
+                    "reference": "Big-endian"
+                },
+                {
+                    "hex": "4D 3C B2 A1",
+                    "reference": "Little-endian (nanosecond-resolution)"
+                },
+                {
+                    "hex": "A1 B2 3C 4D",
+                    "reference": "Big-endian (nanosecond-resolution)"
+                }
+            ]
+        },
+        {
+            "ext": "z",
+            "description": "Compressed file (often tar zip) using LZH algorithm",
+            "signatures": [
+                {
+                    "hex": "1F 9D",
+                    "reference": "\u241f\u25a1"
+                },
+                {
+                    "hex": "1F A0",
+                    "reference": "\u241f\u237d"
+                }
+            ]
+        },
+        {
+            "ext": "tif",
+            "description": "Tagged Image File Format (TIFF)",
+            "signatures": [
+                {
+                    "hex": "49 49 2A 00",
+                    "reference": "Little-endian"
+                },
+                {
+                    "hex": "4D 4D 00 2A",
+                    "reference": "Big-endian"
+                }
+            ]
+        },
+        {
+            "ext": "bpg",
+            "description": "Better Portable Graphics format",
+            "signatures": [
+                {
+                    "hex": "42 50 47 FB",
+                    "reference": "BPG\u00fb"
+                }
+            ]
+        },
+        {
+            "ext": "rar",
+            "description": "Roshal ARchive compressed archive",
+            "signatures": [
+                {
+                    "hex": "52 61 72 21 1A 07 00",
+                    "reference": "v1.50 onwards"
+                },
+                {
+                    "hex": "52 61 72 21 1A 07 01 00",
+                    "reference": "v5.00 onwards"
+                }
+            ]
+        },
+        {
+            "ext": "xml",
+            "description": "eXtensible Markup Language",
+            "signatures": [
+                {
+                    "hex": "3C 3F 78 6D 6C 20",
+                    "reference": "<?xml\u2420"
+                },
+                {
+                    "hex": "3C 00 3F 00 78 00 6D 00",
+                    "reference": "<\u2400?\u2400x\u2400m\u2400l\u2400\u2420\u2400"
+                },
+                {
+                    "hex": "00 3C 00 3F 00 78 00 6D",
+                    "reference": "\u2400<\u2400?\u2400x\u2400m\u2400l\u2400\u2420"
+                },
+                {
+                    "hex": "3C 00 00 00 3F 00 00 00",
+                    "reference": "<\u2400\u2400\u2400?\u2400\u2400\u2400"
+                },
+                {
+                    "hex": "00 00 00 3C 00 00 00 3F",
+                    "reference": "\u2400\u2400\u2400<\u2400\u2400\u2400?"
+                },
+                {
+                    "hex": "4C 6F A7 94 93 40",
+                    "reference": "Lo\u00a7\u201d\u201c@"
+                }
+            ]
+        },
+        {
+            "ext": "deb",
+            "description": "Linux deb file",
+            "signatures": [
+                {
+                    "hex": "21 3C 61 72 63 68 3E 0A",
+                    "reference": "!<arch>\u240a"
+                }
+            ]
+        },
+        {
+            "ext": "icns",
+            "description": "Apple Icon Image format",
+            "signatures": [
+                {
+                    "hex": "69 63 6E 73",
+                    "reference": "icns"
+                }
+            ]
+        },
+        {
+            "ext": "asf",
+            "description": "Advanced Systems Format",
+            "signatures": [
+                {
+                    "hex": "30 26 B2 75 8E 66 CF 11",
+                    "reference": "0&\u00b2u\u017df\u00cf\u2411\u00a6\u00d9\u2400\u00aa\u2400b\u00cel"
+                }
+            ]
+        },
+        {
+            "ext": "ogg",
+            "description": "Ogg, an open source media container format",
+            "signatures": [
+                {
+                    "hex": "4F 67 67 53",
+                    "reference": "OggS"
+                }
+            ]
+        },
+        {
+            "ext": "psd",
+            "description": "Photoshop Document file, Adobe Photoshop's native file format",
+            "signatures": [
+                {
+                    "hex": "38 42 50 53",
+                    "reference": "8BPS"
+                }
+            ]
+        },
+        {
+            "ext": "wav",
+            "description": "Waveform Audio File Format",
+            "signatures": [
+                {
+                    "hex": "52 49 46 46 00 00 00 00",
+                    "reference": "RIFF????WAVE"
+                }
+            ]
+        },
+        {
+            "ext": "avi",
+            "description": "Audio Video Interleave video format",
+            "signatures": [
+                {
+                    "hex": "52 49 46 46 FF FF FF FF",
+                    "reference": "RIFF????AVI\u2420"
+                }
+            ]
+        },
+        {
+            "ext": "mp3",
+            "description": "MP3 File Format",
+            "signatures": [
+                {
+                    "hex": "FF FB",
+                    "reference": "MPEG-1 Layer 3 file without an ID3 tag"
+                },
+                {
+                    "hex": "49 44 33",
+                    "reference": "MP3 file with an ID3v2 container"
+                }
+            ]
+        },
+        {
+            "ext": "bmp",
+            "description": "BMP file, a bitmap format used mostly in the Windows world",
+            "signatures": [
+                {
+                    "hex": "42 4D",
+                    "reference": "BM"
+                }
+            ]
+        },
+        {
+            "ext": "flac",
+            "description": "Free Lossless Audio Codec",
+            "signatures": [
+                {
+                    "hex": "66 4C 61 43",
+                    "reference": "fLaC"
+                }
+            ]
+        },
+        {
+            "ext": "mid",
+            "description": "MIDI sound file",
+            "signatures": [
+                {
+                    "hex": "4D 54 68 64",
+                    "reference": "MThd"
+                }
+            ]
+        },
+        {
+            "ext": "wasm",
+            "description": "WebAssembly binary format",
+            "signatures": [
+                {
+                    "hex": "00 61 73 6D",
+                    "reference": "\u2400asm"
+                }
+            ]
+        },
+        {
+            "ext": "lep",
+            "description": "Lepton compressed JPEG image",
+            "signatures": [
+                {
+                    "hex": "CF 84 01",
+                    "reference": "\u00cf\u201e\u2401"
+                }
+            ]
+        },
+        {
+            "ext": "swf",
+            "description": "Adobe Flash .swf",
+            "signatures": [
+                {
+                    "hex": "43 57 53",
+                    "reference": "CWS"
+                },
+                {
+                    "hex": "46 57 53",
+                    "reference": "FWS"
+                }
+            ]
+        },
+        {
+            "ext": "webp",
+            "description": "Google WebP image file",
+            "signatures": [
+                {
+                    "hex": "52 49 46 46 00 00 00 00",
+                    "reference": "RIFF????WEBP"
+                }
+            ]
+        },
+        {
+            "ext": "rtf",
+            "description": "Rich Text Format",
+            "signatures": [
+                {
+                    "hex": "7B 5C 72 74 66 31",
+                    "reference": "{\\rtf1"
+                }
+            ]
+        },
+        {
+            "ext": "ts",
+            "description": "MPEG Transport Stream",
+            "signatures": [
+                {
+                    "hex": "47",
+                    "reference": "G"
+                }
+            ]
+        },
+        {
+            "ext": "m2p",
+            "description": "MPEG Program Stream",
+            "signatures": [
+                {
+                    "hex": "00 00 01 BA",
+                    "reference": "\u2400\u2400\u2401\u00ba"
+                }
+            ]
+        },
+        {
+            "ext": "mpg",
+            "description": "MPEG-1 video and MPEG-2 video",
+            "signatures": [
+                {
+                    "hex": "00 00 01 B3",
+                    "reference": "\u2400\u2400\u2401\u00b3"
+                }
+            ]
+        },
+        {
+            "ext": "wk1",
+            "description": "Lotus 1-2-3 spreadsheet (v1) file",
+            "signatures": [
+                {
+                    "hex": "00 00 02 00 06 04 06 00 08 00 00 00 00 00",
+                    "reference": "v1 file"
+                }
+            ]
+        },
+        {
+            "ext": "wk3",
+            "description": "Lotus 1-2-3 spreadsheet (v3) file",
+            "signatures": [
+                {
+                    "hex": "00 00 1A 00 00 10 04 00 00 00 00 00",
+                    "reference": "v3 file"
+                }
+            ]
+        },
+        {
+            "ext": "wk4",
+            "description": "Lotus 1-2-3 spreadsheet (v4, v5) file",
+            "signatures": [
+                {
+                    "hex": "00 00 1A 00 02 10 04 00 00 00 00 00",
+                    "reference": "v4, v5 file"
+                }
+            ]
+        },
+        {
+            "ext": "123",
+            "description": "Lotus 1-2-3 spreadsheet (v9) file",
+            "signatures": [
+                {
+                    "hex": "00 00 1A 00 05 10 04",
+                    "reference": "v9 file"
+                }
+            ]
+        },
+        {
+            "ext": "qxd",
+            "description": "Quark Express document",
+            "signatures": [
+                {
+                    "hex": "00 00 49 49 58 50 52",
+                    "reference": "Little-endian"
+                }
+            ]
+        },
+        {
+            "ext": "psafe3",
+            "description": "Password Gorilla Password Database",
+            "signatures": [
+                {
+                    "hex": "50 57 53 33",
+                    "reference": "PWS3"
+                }
+            ]
+        },
+        {
+            "ext": "wad",
+            "description": "Internal WAD",
+            "signatures": [
+                {
+                    "hex": "49 57 41 44",
+                    "reference": "IWAD"
+                }
+            ]
+        },
+        {
+            "ext": "DBA",
+            "description": "Palm Desktop",
+            "signatures": [
+                {
+                    "hex": "BE BA FE CA",
+                    "reference": "Calendar Archive"
+                },
+                {
+                    "hex": "00 01 42 44",
+                    "reference": "To Do Archive"
+                }
+            ]
+        },
+        {
+            "ext": "rpm",
+            "description": "RedHat Package Manager (RPM) package",
+            "signatures": [
+                {
+                    "hex": "ED AB EE DB",
+                    "reference": "\u00ed\u00ab\u00ee\u00db"
+                }
+            ]
+        },
+        {
+            "ext": "sqlitedb",
+            "description": "SQLite Database",
+            "signatures": [
+                {
+                    "hex": "53 51 4C 69 74 65 20 66",
+                    "reference": "SQLite format 3"
+                }
+            ]
+        },
+        {
+            "ext": "gz",
+            "description": "GZIP compressed file",
+            "signatures": [
+                {
+                    "hex": "1F 8B",
+                    "reference": "\u241f\u2039"
+                }
+            ]
+        },
+        {
+            "ext": "m3u",
+            "description": "Multimedia playlist",
+            "signatures": [
+                {
+                    "hex": "23 45 58 54 4D 33 55",
+                    "reference": "#EXTM3U"
+                }
+            ]
+        },
+        {
+            "ext": "pub",
+            "description": "OpenSSH public key file",
+            "signatures": [
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 53 53 48 32 20 4B 45 59 2D 2D 2D 2D 2D",
+                    "reference": "-----BEGIN SSH2 PUBLIC KEY-----"
+                }
+            ]
+        },
+        {
+            "ext": "ssh",
+            "description": "OpenSSH private key file",
+            "signatures": [
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 4F 50 45 4E 53 53 48 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
+                    "reference": "-----BEGIN OPENSSH PRIVATE KEY-----"
+                }
+            ]
+        },
+        {
+            "ext": "xz",
+            "description": "XZ compression utility",
+            "signatures": [
+                {
+                    "hex": "FD 37 7A 58 5A 00",
+                    "reference": "\u00fd7zXZ\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "TDA",
+            "description": "Palm Desktop Calendar Archive",
+            "signatures": [
+                {
+                    "hex": "00 01 44 54",
+                    "reference": "\u2400\u2401DT"
+                }
+            ]
+        },
+        {
+            "ext": "TDF$",
+            "description": "Telegram Desktop File",
+            "signatures": [
+                {
+                    "hex": "54 44 46 24",
+                    "reference": "TDF$"
+                }
+            ]
+        },
+        {
+            "ext": "TDEF",
+            "description": "Telegram Desktop Encrypted File",
+            "signatures": [
+                {
+                    "hex": "54 44 45 46",
+                    "reference": "TDEF"
+                }
+            ]
+        },
+        {
+            "ext": "idx",
+            "description": "Index File",
+            "signatures": [
+                {
+                    "hex": "49 4E 44 58",
+                    "reference": "AmiBack Amiga Backup index file"
+                }
+            ]
+        },
+        {
+            "ext": "plist",
+            "description": "Binary Property List file",
+            "signatures": [
+                {
+                    "hex": "62 70 6C 69 73 74",
+                    "reference": "bplist"
+                }
+            ]
+        },
+        {
+            "ext": "bz2",
+            "description": "Compressed file using Bzip2 algorithm",
+            "signatures": [
+                {
+                    "hex": "42 5A 68",
+                    "reference": "BZh"
+                }
+            ]
+        },
+        {
+            "ext": "cr2",
+            "description": "Canon RAW Format Version 2",
+            "signatures": [
+                {
+                    "hex": "49 49 2A 00 10 00 00 00",
+                    "reference": "II*\u2400\u2410\u2400\u2400\u2400CR"
+                }
+            ]
+        },
+        {
+            "ext": "cin",
+            "description": "Kodak Cineon image",
+            "signatures": [
+                {
+                    "hex": "80 2A 5F D7",
+                    "reference": "\u20ac*_\u00d7"
+                }
+            ]
+        },
+        {
+            "ext": "nui",
+            "description": "Nuru ASCII/ANSI image and palette files",
+            "signatures": [
+                {
+                    "hex": "4E 55 52 55 49 4D 47",
+                    "reference": "NURUIMG"
+                }
+            ]
+        },
+        {
+            "ext": "dpx",
+            "description": "SMPTE DPX image",
+            "signatures": [
+                {
+                    "hex": "53 44 50 58",
+                    "reference": "SDPX (big-endian format)"
+                },
+                {
+                    "hex": "58 50 44 53",
+                    "reference": "XPDS (little-endian format)"
+                }
+            ]
+        },
+        {
+            "ext": "exr",
+            "description": "OpenEXR image",
+            "signatures": [
+                {
+                    "hex": "76 2F 31 01",
+                    "reference": "v/1\u2401"
+                }
+            ]
+        },
+        {
+            "ext": "ilbm",
+            "description": "IFF Interleaved Bitmap Image",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 00 00 00 00",
+                    "reference": "FORM????ILBM"
+                }
+            ]
+        },
+        {
+            "ext": "8svx",
+            "description": "IFF 8-Bit Sampled Voice",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 01 01 01 01",
+                    "reference": "FORM????8SVX"
+                }
+            ]
+        },
+        {
+            "ext": "acbm",
+            "description": "Amiga Contiguous Bitmap",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 02 02 02 02",
+                    "reference": "FORM????ACBM"
+                }
+            ]
+        },
+        {
+            "ext": "anbm",
+            "description": "IFF Animated Bitmap",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 03 03 03 03",
+                    "reference": "FORM????ANBM"
+                }
+            ]
+        },
+        {
+            "ext": "anim",
+            "description": "IFF CEL Animation",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 04 04 04 04",
+                    "reference": "FORM????ANIM"
+                }
+            ]
+        },
+        {
+            "ext": "faxx",
+            "description": "IFF Facsimile Image",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 05 05 05 05",
+                    "reference": "FORM????FAXX"
+                }
+            ]
+        },
+        {
+            "ext": "ftxt",
+            "description": "IFF Formatted Text",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 06 06 06 06",
+                    "reference": "FORM????FTXT"
+                }
+            ]
+        },
+        {
+            "ext": "smus",
+            "description": "IFF Simple Musical Score",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 07 07 07 07",
+                    "reference": "FORM????SMUS"
+                }
+            ]
+        },
+        {
+            "ext": "cmus",
+            "description": "IFF Musical Score",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 08 08 08 08",
+                    "reference": "FORM????CMUS"
+                }
+            ]
+        },
+        {
+            "ext": "yuvn",
+            "description": "IFF YUV Image",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 09 09 09 09",
+                    "reference": "FORM????YUVN"
+                }
+            ]
+        },
+        {
+            "ext": "iff",
+            "description": "Amiga Fantavision Movie",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 0A 0A 0A 0A",
+                    "reference": "FORM????FANT"
+                }
+            ]
+        },
+        {
+            "ext": "aiff",
+            "description": "Audio Interchange File Format",
+            "signatures": [
+                {
+                    "hex": "46 4F 52 4D 0B 0B 0B 0B",
+                    "reference": "FORM????AIFF"
+                }
+            ]
+        },
+        {
+            "ext": "lz",
+            "description": "Lzip compressed file",
+            "signatures": [
+                {
+                    "hex": "4C 5A 49 50",
+                    "reference": "LZIP"
+                }
+            ]
+        },
+        {
+            "ext": "cpio",
+            "description": "Cpio archive file",
+            "signatures": [
+                {
+                    "hex": "30 37 30 37 30 37",
+                    "reference": "7070"
+                }
+            ]
+        },
+        {
+            "ext": "elf",
+            "description": "Executable and Linkable Format",
+            "signatures": [
+                {
+                    "hex": "7F 45 4C 46",
+                    "reference": "\u2421ELF"
+                }
+            ]
+        },
+        {
+            "ext": "qoif",
+            "description": "QOI - The \"Quite OK Image Format\"",
+            "signatures": [
+                {
+                    "hex": "71 6F 69 66",
+                    "reference": "qoif"
+                }
+            ]
+        },
+        {
+            "ext": "class",
+            "description": "Java class file",
+            "signatures": [
+                {
+                    "hex": "CA FE BA BE",
+                    "reference": "Java class file, Mach-O Fat Binary"
+                }
+            ]
+        },
+        {
+            "ext": "com",
+            "description": "COM original binary executable format",
+            "signatures": [
+                {
+                    "hex": "C9",
+                    "reference": "CP/M 3 and higher with overlays"
+                }
+            ]
+        },
+        {
+            "ext": "ps",
+            "description": "PostScript document",
+            "signatures": [
+                {
+                    "hex": "25 21 50 53",
+                    "reference": "%!PS"
+                }
+            ]
+        },
+        {
+            "ext": "eps",
+            "description": "Encapsulated PostScript file",
+            "signatures": [
+                {
+                    "hex": "25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 30 20 45 50 53 46 2D 33 2E 30",
+                    "reference": "Version 3.0"
+                },
+                {
+                    "hex": "25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30",
+                    "reference": "Version 3.1"
+                }
+            ]
+        },
+        {
+            "ext": "chm",
+            "description": "MS Windows HtmlHelp Data",
+            "signatures": [
+                {
+                    "hex": "49 54 53 46 03 00 00 00",
+                    "reference": "ITSF\u2403\u2400\u2400\u2400`\u2400\u2400\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "hlp",
+            "description": "Windows 3.x/95/98 Help file",
+            "signatures": [
+                {
+                    "hex": "3F 5F",
+                    "reference": "?_"
+                }
+            ]
+        },
+        {
+            "ext": "sdi",
+            "description": "System Deployment Image, a disk image format used by Microsoft",
+            "signatures": [
+                {
+                    "hex": "24 53 44 49 30 30 30 31",
+                    "reference": "$SDI0001"
+                }
+            ]
+        },
+        {
+            "ext": "fits",
+            "description": "Flexible Image Transport System (FITS)",
+            "signatures": [
+                {
+                    "hex": "53 49 4D 50 4C 45 20 20",
+                    "reference": "SIMPLE\u2420\u2420"
+                }
+            ]
+        },
+        {
+            "ext": "doc",
+            "description": "Compound File Binary Format, a container format defined by Microsoft COM",
+            "signatures": [
+                {
+                    "hex": "D0 CF 11 E0 A1 B1 1A E1",
+                    "reference": "Used by Windows Installer and for documents in older versions of Microsoft Office."
+                },
+                {
+                    "hex": "0D 44 4F 43",
+                    "reference": "DeskMate Document file"
+                }
+            ]
+        },
+        {
+            "ext": "vmdk",
+            "description": "VMDK files",
+            "signatures": [
+                {
+                    "hex": "4B 44 4D",
+                    "reference": "KDM"
+                },
+                {
+                    "hex": "23 20 44 69 73 6B 20 44 65 73 63 72 69 70 74 6F",
+                    "reference": "VMware 4 Virtual Disk description file (split disk)"
+                }
+            ]
+        },
+        {
+            "ext": "crk",
+            "description": "Google Chrome extension",
+            "signatures": [
+                {
+                    "hex": "43 72 32 34",
+                    "reference": "Google Chrome extension or packaged app (Cr24)"
+                }
+            ]
+        },
+        {
+            "ext": "dex",
+            "description": "Dalvik Executable",
+            "signatures": [
+                {
+                    "hex": "64 65 78 0A 30 33 35 00",
+                    "reference": "dex\u240a035\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "fh8",
+            "description": "FreeHand 8 document",
+            "signatures": [
+                {
+                    "hex": "41 47 44 33",
+                    "reference": "AGD3"
+                }
+            ]
+        },
+        {
+            "ext": "cwk",
+            "description": "AppleWorks file",
+            "signatures": [
+                {
+                    "hex": "05 07 00 00 42 4F 42 4F",
+                    "reference": "AppleWorks 5"
+                },
+                {
+                    "hex": "06 07 E1 00 42 4F 42 4F",
+                    "reference": "AppleWorks 6"
+                }
+            ]
+        },
+        {
+            "ext": "toast",
+            "description": "Roxio Toast disc image file",
+            "signatures": [
+                {
+                    "hex": "45 52 02 00 00 00",
+                    "reference": "ER\u2402\u2400\u2400\u2400"
+                },
+                {
+                    "hex": "8B 45 52 02 00 00 00",
+                    "reference": "\u2039ER\u2402\u2400\u2400\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "xar",
+            "description": "eXtensible ARchive format",
+            "signatures": [
+                {
+                    "hex": "78 61 72 21",
+                    "reference": "xar!"
+                }
+            ]
+        },
+        {
+            "ext": "dat",
+            "description": "Windows Registry / Transfer Repository",
+            "signatures": [
+                {
+                    "hex": "72 65 67 66",
+                    "reference": "Windows Registry file"
+                },
+                {
+                    "hex": "50 4D 4F 43 43 4D 4F 43",
+                    "reference": "Windows Files And Settings Transfer Repository"
+                }
+            ]
+        },
+        {
+            "ext": "oar",
+            "description": "OAR file archive format",
+            "signatures": [
+                {
+                    "hex": "4F 41 52 01",
+                    "reference": "Version 1"
+                }
+            ]
+        },
+        {
+            "ext": "tox",
+            "description": "Open source portable voxel file",
+            "signatures": [
+                {
+                    "hex": "74 6F 78 33",
+                    "reference": "tox3"
+                }
+            ]
+        },
+        {
+            "ext": "mlv",
+            "description": "Magic Lantern Video file",
+            "signatures": [
+                {
+                    "hex": "4D 4C 56 49",
+                    "reference": "MLVI"
+                }
+            ]
+        },
+        {
+            "ext": "dcm",
+            "description": "Windows Update Binary Delta Compression file",
+            "signatures": [
+                {
+                    "hex": "44 43 4D 01 50 41 33 30",
+                    "reference": "DCM\u2401PA30"
+                }
+            ]
+        },
+        {
+            "ext": "lz4",
+            "description": "LZ4 Frame Format",
+            "signatures": [
+                {
+                    "hex": "04 22 4D 18",
+                    "reference": "\u2404\"M\u2418"
+                }
+            ]
+        },
+        {
+            "ext": "cab",
+            "description": "Microsoft Cabinet file",
+            "signatures": [
+                {
+                    "hex": "4D 53 43 46",
+                    "reference": "MSCF"
+                },
+                {
+                    "hex": "49 53 63 28",
+                    "reference": "InstallShield CAB Archive File"
+                }
+            ]
+        },
+        {
+            "ext": "q_",
+            "description": "Microsoft compressed file in Quantum format",
+            "signatures": [
+                {
+                    "hex": "53 5A 44 44 88 F0 27 33",
+                    "reference": "Used prior to Windows XP"
+                }
+            ]
+        },
+        {
+            "ext": "flif",
+            "description": "Free Lossless Image Format",
+            "signatures": [
+                {
+                    "hex": "46 4C 49 46",
+                    "reference": "FLIF"
+                }
+            ]
+        },
+        {
+            "ext": "mkv",
+            "description": "Matroska media container, including WebM",
+            "signatures": [
+                {
+                    "hex": "1A 45 DF A3",
+                    "reference": "\u241aE\u00df\u00a3"
+                }
+            ]
+        },
+        {
+            "ext": "stg",
+            "description": "\"SEAN: Session Analysis\" Training file",
+            "signatures": [
+                {
+                    "hex": "4D 49 4C 20",
+                    "reference": "Also used in compatible software \"Rpw: Rowperfect for Windows\" and \"RP3W: ROWPERFECT3 for Windows\""
+                }
+            ]
+        },
+        {
+            "ext": "djvu",
+            "description": "DjVu document",
+            "signatures": [
+                {
+                    "hex": "41 54 26 54 46 4F 52 4D",
+                    "reference": "AT&TFORM????DJV"
+                }
+            ]
+        },
+        {
+            "ext": "der",
+            "description": "DER encoded X.509 certificate",
+            "signatures": [
+                {
+                    "hex": "30 82",
+                    "reference": "0\u201a"
+                }
+            ]
+        },
+        {
+            "ext": "crt",
+            "description": "PEM encoded X.509 certificate",
+            "signatures": [
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D",
+                    "reference": "-----BEGIN CERTIFICATE-----"
+                }
+            ]
+        },
+        {
+            "ext": "csr",
+            "description": "PEM encoded X.509 Certificate Signing Request",
+            "signatures": [
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D",
+                    "reference": "-----BEGIN CERTIFICATE REQUEST-----"
+                }
+            ]
+        },
+        {
+            "ext": "key",
+            "description": "PEM encoded X.509",
+            "signatures": [
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
+                    "reference": "PKCS#8 private key"
+                },
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
+                    "reference": "PKCS#1 DSA private key"
+                },
+                {
+                    "hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
+                    "reference": "PKCS#1 RSA private key"
+                }
+            ]
+        },
+        {
+            "ext": "ppk",
+            "description": "PuTTY private key file",
+            "signatures": [
+                {
+                    "hex": "50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 32 3A",
+                    "reference": "Version 2"
+                },
+                {
+                    "hex": "50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 33 3A",
+                    "reference": "Version 3"
+                }
+            ]
+        },
+        {
+            "ext": "lzfse",
+            "description": "LZFSE - Lempel-Ziv style data compression algorithm",
+            "signatures": [
+                {
+                    "hex": "62 76 78 32",
+                    "reference": "Using Finite State Entropy coding"
+                }
+            ]
+        },
+        {
+            "ext": "orc",
+            "description": "Apache ORC (Optimized Row Columnar) file format",
+            "signatures": [
+                {
+                    "hex": "4F 52 43",
+                    "reference": "ORC"
+                }
+            ]
+        },
+        {
+            "ext": "avro",
+            "description": "Apache Avro binary file format",
+            "signatures": [
+                {
+                    "hex": "4F 62 6A 01",
+                    "reference": "Obj\u2401"
+                }
+            ]
+        },
+        {
+            "ext": "rc",
+            "description": "RCFile columnar file format",
+            "signatures": [
+                {
+                    "hex": "53 45 51 36",
+                    "reference": "SEQ6"
+                }
+            ]
+        },
+        {
+            "ext": "p25",
+            "description": "PhotoCap Object Templates",
+            "signatures": [
+                {
+                    "hex": "65 87 78 56",
+                    "reference": "e\u2021xV"
+                }
+            ]
+        },
+        {
+            "ext": "pcv",
+            "description": "PhotoCap Vector",
+            "signatures": [
+                {
+                    "hex": "55 55 AA AA",
+                    "reference": "UU\u00aa\u00aa"
+                }
+            ]
+        },
+        {
+            "ext": "pbt",
+            "description": "PhotoCap Template",
+            "signatures": [
+                {
+                    "hex": "78 56 34",
+                    "reference": "xV4"
+                }
+            ]
+        },
+        {
+            "ext": "luac",
+            "description": "Lua bytecode",
+            "signatures": [
+                {
+                    "hex": "1B 4C 75 61",
+                    "reference": "\u241bLua"
+                }
+            ]
+        },
+        {
+            "ext": "alias",
+            "description": "macOS file Alias",
+            "signatures": [
+                {
+                    "hex": "62 6F 6F 6B 00 00 00 00",
+                    "reference": "Symbolic link"
+                }
+            ]
+        },
+        {
+            "ext": "Identifier",
+            "description": "Microsoft Zone Identifier for URL Security Zones",
+            "signatures": [
+                {
+                    "hex": "5B 5A 6F 6E 65 54 72 61",
+                    "reference": "[ZoneTransfer]"
+                }
+            ]
+        },
+        {
+            "ext": "eml",
+            "description": "Email Message",
+            "signatures": [
+                {
+                    "hex": "52 65 63 65 69 76 65 64",
+                    "reference": "Received:"
+                }
+            ]
+        },
+        {
+            "ext": "tde",
+            "description": "Tableau Datasource",
+            "signatures": [
+                {
+                    "hex": "20 02 01 62 A0 1E AB 07",
+                    "reference": "\u2420\u2402\u2401b\u237d\u241e\u00ab\u2407\u2402\u2400\u2400\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "kdb",
+            "description": "KDB file",
+            "signatures": [
+                {
+                    "hex": "37 48 03 02 00 00 00 00",
+                    "reference": "7H\u2403\u2402\u2400\u2400\u2400\u2400X509KEY"
+                }
+            ]
+        },
+        {
+            "ext": "pgp",
+            "description": "PGP file",
+            "signatures": [
+                {
+                    "hex": "85 00 00 03",
+                    "reference": "\u2026??\u2403"
+                }
+            ]
+        },
+        {
+            "ext": "zst",
+            "description": "Zstandard compress",
+            "signatures": [
+                {
+                    "hex": "28 B5 2F FD",
+                    "reference": "(\u00b5/\u00fd"
+                }
+            ]
+        },
+        {
+            "ext": "rs",
+            "description": "QuickZip rs compressed archive",
+            "signatures": [
+                {
+                    "hex": "52 53 56 4B 44 41 54 41",
+                    "reference": "RSVKDATA"
+                }
+            ]
+        },
+        {
+            "ext": "sml",
+            "description": "Smile file",
+            "signatures": [
+                {
+                    "hex": "3A 29 0A",
+                    "reference": ":)\u240a"
+                }
+            ]
+        },
+        {
+            "ext": "srt",
+            "description": "SubRip File",
+            "signatures": [
+                {
+                    "hex": "31 0A 30 30",
+                    "reference": "1\u240a00"
+                }
+            ]
+        },
+        {
+            "ext": "vpk",
+            "description": "VPK file",
+            "signatures": [
+                {
+                    "hex": "34 12 AA 55",
+                    "reference": "Used to store game data for some Source Engine games"
+                }
+            ]
+        },
+        {
+            "ext": "arj",
+            "description": "ARJ file",
+            "signatures": [
+                {
+                    "hex": "60 EA",
+                    "reference": "`\u00ea"
+                }
+            ]
+        },
+        {
+            "ext": "??_",
+            "description": "Windows Compressed File",
+            "signatures": [
+                {
+                    "hex": "4B 57 41 4A",
+                    "reference": "Windows 3.1x"
+                },
+                {
+                    "hex": "53 5A 44 44",
+                    "reference": "Windows 9x"
+                }
+            ]
+        },
+        {
+            "ext": "zoo",
+            "description": "Zoo file format",
+            "signatures": [
+                {
+                    "hex": "5A 4F 4F",
+                    "reference": "ZOO"
+                }
+            ]
+        },
+        {
+            "ext": "pbm",
+            "description": "Portable bitmap",
+            "signatures": [
+                {
+                    "hex": "50 31 0A",
+                    "reference": "ASCII"
+                },
+                {
+                    "hex": "50 34 0A",
+                    "reference": "Binary"
+                }
+            ]
+        },
+        {
+            "ext": "pgm",
+            "description": "Portable Gray Map",
+            "signatures": [
+                {
+                    "hex": "50 32 0A",
+                    "reference": "ASCII"
+                },
+                {
+                    "hex": "50 35 0A",
+                    "reference": "Binary"
+                }
+            ]
+        },
+        {
+            "ext": "ppm",
+            "description": "Portable Pixmap",
+            "signatures": [
+                {
+                    "hex": "50 33 0A",
+                    "reference": "ASCII"
+                },
+                {
+                    "hex": "50 36 0A",
+                    "reference": "Binary"
+                }
+            ]
+        },
+        {
+            "ext": "wmf",
+            "description": "Windows Metafile",
+            "signatures": [
+                {
+                    "hex": "D7 CD C6 9A",
+                    "reference": "\u00d7\u00cd\u00c6\u0161"
+                }
+            ]
+        },
+        {
+            "ext": "xcf",
+            "description": "XCF (file format)",
+            "signatures": [
+                {
+                    "hex": "67 69 6D 70 20 78 63 66",
+                    "reference": "gimp xcf"
+                }
+            ]
+        },
+        {
+            "ext": "xpm",
+            "description": "X PixMap",
+            "signatures": [
+                {
+                    "hex": "2F 2A 20 58 50 4D 20 2A",
+                    "reference": "/* XPM */"
+                }
+            ]
+        },
+        {
+            "ext": "aff",
+            "description": "Advanced Forensics Format",
+            "signatures": [
+                {
+                    "hex": "41 46 46",
+                    "reference": "AFF"
+                }
+            ]
+        },
+        {
+            "ext": "Ex01",
+            "description": "EnCase EWF version 2 format",
+            "signatures": [
+                {
+                    "hex": "45 56 46 32",
+                    "reference": "EVF2"
+                }
+            ]
+        },
+        {
+            "ext": "e01",
+            "description": "EnCase EWF version 1 format",
+            "signatures": [
+                {
+                    "hex": "45 56 46",
+                    "reference": "EVF"
+                }
+            ]
+        },
+        {
+            "ext": "qcow",
+            "description": "qcow file format",
+            "signatures": [
+                {
+                    "hex": "51 46 49",
+                    "reference": "QFI"
+                }
+            ]
+        },
+        {
+            "ext": "ani",
+            "description": "Animated cursor",
+            "signatures": [
+                {
+                    "hex": "52 49 46 46 00 00 00 00",
+                    "reference": "RIFF????ACON"
+                }
+            ]
+        },
+        {
+            "ext": "cda",
+            "description": ".cda file",
+            "signatures": [
+                {
+                    "hex": "52 49 46 46 00 00 00 00",
+                    "reference": "RIFF????CDDA"
+                }
+            ]
+        },
+        {
+            "ext": "qcp",
+            "description": "Qualcomm PureVoice file format",
+            "signatures": [
+                {
+                    "hex": "52 49 46 46 00 00 00 00",
+                    "reference": "RIFF????QLCM"
+                }
+            ]
+        },
+        {
+            "ext": "dcr",
+            "description": "Adobe Shockwave",
+            "signatures": [
+                {
+                    "hex": "52 49 46 58 00 00 00 00",
+                    "reference": "RIFX????FGDM"
+                },
+                {
+                    "hex": "58 46 49 52 00 00 00 00",
+                    "reference": "XFIR????MDGF"
+                }
+            ]
+        },
+        {
+            "ext": "dir",
+            "description": "Macromedia Director file format",
+            "signatures": [
+                {
+                    "hex": "52 49 46 58 00 00 00 00",
+                    "reference": "RIFX????MV93"
+                },
+                {
+                    "hex": "58 46 49 52 00 00 00 00",
+                    "reference": "XFIR????39VM"
+                }
+            ]
+        },
+        {
+            "ext": "flv",
+            "description": "Flash Video file",
+            "signatures": [
+                {
+                    "hex": "46 4C 56",
+                    "reference": "FLV"
+                }
+            ]
+        },
+        {
+            "ext": "vdi",
+            "description": "VirtualBox Virtual Hard Disk file format",
+            "signatures": [
+                {
+                    "hex": "3C 3C 3C 20 4F 72 61 63",
+                    "reference": "<<< Orac"
+                }
+            ]
+        },
+        {
+            "ext": "vhd",
+            "description": "Windows Virtual PC Virtual Hard Disk file format",
+            "signatures": [
+                {
+                    "hex": "63 6F 6E 6E 65 63 74 69",
+                    "reference": "connectix"
+                }
+            ]
+        },
+        {
+            "ext": "vhdx",
+            "description": "Windows Virtual PC Windows 8 Virtual Hard Disk file format",
+            "signatures": [
+                {
+                    "hex": "76 68 64 78 66 69 6C 65",
+                    "reference": "vhdxfile"
+                }
+            ]
+        },
+        {
+            "ext": "isz",
+            "description": "Compressed ISO image",
+            "signatures": [
+                {
+                    "hex": "49 73 5A 21",
+                    "reference": "IsZ!"
+                }
+            ]
+        },
+        {
+            "ext": "daa",
+            "description": "Direct Access Archive PowerISO",
+            "signatures": [
+                {
+                    "hex": "44 41 41",
+                    "reference": "DAA"
+                }
+            ]
+        },
+        {
+            "ext": "evt",
+            "description": "Windows Event Viewer file format",
+            "signatures": [
+                {
+                    "hex": "4C 66 4C 65",
+                    "reference": "LfLe"
+                }
+            ]
+        },
+        {
+            "ext": "evtx",
+            "description": "Windows Event Viewer XML file format",
+            "signatures": [
+                {
+                    "hex": "45 6C 66 46 69 6C 65",
+                    "reference": "ElfFile"
+                }
+            ]
+        },
+        {
+            "ext": "grp",
+            "description": "Windows 3.x Program Manager Program Group file format",
+            "signatures": [
+                {
+                    "hex": "50 4D 43 43",
+                    "reference": "PMCC"
+                }
+            ]
+        },
+        {
+            "ext": "icm",
+            "description": "ICC profile",
+            "signatures": [
+                {
+                    "hex": "4B 43 4D 53",
+                    "reference": "KCMS"
+                }
+            ]
+        },
+        {
+            "ext": "pst",
+            "description": "Microsoft Outlook Personal Storage Table file",
+            "signatures": [
+                {
+                    "hex": "21 42 44 4E",
+                    "reference": "!BDN"
+                }
+            ]
+        },
+        {
+            "ext": "drc",
+            "description": "3D model compressed with Google Draco",
+            "signatures": [
+                {
+                    "hex": "44 52 41 43 4F",
+                    "reference": "DRACO"
+                }
+            ]
+        },
+        {
+            "ext": "grib",
+            "description": "Gridded data",
+            "signatures": [
+                {
+                    "hex": "47 52 49 42",
+                    "reference": "WMO GRIB or GRIB2 format"
+                }
+            ]
+        },
+        {
+            "ext": "blend",
+            "description": "Blender File Format",
+            "signatures": [
+                {
+                    "hex": "42 4C 45 4E 44 45 52",
+                    "reference": "BLENDER"
+                }
+            ]
+        },
+        {
+            "ext": "jxl",
+            "description": "Image encoded in the JPEG XL format",
+            "signatures": [
+                {
+                    "hex": "00 00 00 0C 4A 58 4C 20 0D 0A 87 0A",
+                    "reference": "\u2400\u2400\u2400\u240cJXL\u2420\u240d\u240a\u2021\u240a"
+                },
+                {
+                    "hex": "FF 0A",
+                    "reference": "\u00ff\u240a"
+                }
+            ]
+        },
+        {
+            "ext": "ttf",
+            "description": "TrueType font",
+            "signatures": [
+                {
+                    "hex": "00 01 00 00 00",
+                    "reference": "\u2400\u2401\u2400\u2400\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "otf",
+            "description": "OpenType font",
+            "signatures": [
+                {
+                    "hex": "4F 54 54 4F",
+                    "reference": "OTTO"
+                }
+            ]
+        },
+        {
+            "ext": "wim",
+            "description": "Windows Imaging Format file",
+            "signatures": [
+                {
+                    "hex": "4D 53 57 49 4D 00 00 00",
+                    "reference": "MSWIM\u2400\u2400\u2400\u00d0\u2400\u2400\u2400\u2400"
+                }
+            ]
+        },
+        {
+            "ext": "slob",
+            "description": "Slob (sorted list of blobs)",
+            "signatures": [
+                {
+                    "hex": "21 2D 31 53 4C 4F 42 1F",
+                    "reference": "Read-only, compressed data store with dictionary-like interface"
+                }
+            ]
+        },
+        {
+            "ext": "voc",
+            "description": "Creative Voice file",
+            "signatures": [
+                {
+                    "hex": "43 72 65 61 74 69 76 65 20 56 6F 69 63 65 20 46 69 6C 65 1A 1A 00",
+                    "reference": "Creative Voice File"
+                }
+            ]
+        },
+        {
+            "ext": "au",
+            "description": "Au audio file format",
+            "signatures": [
+                {
+                    "hex": "2E 73 6E 64",
+                    "reference": ".snd"
+                }
+            ]
+        },
+        {
+            "ext": "hazelrules",
+            "description": "Noodlesoft Hazel",
+            "signatures": [
+                {
+                    "hex": "48 5A 4C 52 00 00 00 18",
+                    "reference": "HZLR"
+                }
+            ]
+        },
+        {
+            "ext": "flp",
+            "description": "FL Studio Project File",
+            "signatures": [
+                {
+                    "hex": "46 4C 68 64",
+                    "reference": "FLhd"
+                }
+            ]
+        },
+        {
+            "ext": "flm",
+            "description": "FL Studio Mobile Project File",
+            "signatures": [
+                {
+                    "hex": "31 30 4C 46",
+                    "reference": "10FL"
+                }
+            ]
+        },
+        {
+            "ext": "mny",
+            "description": "Microsoft Money file",
+            "signatures": [
+                {
+                    "hex": "00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65",
+                    "reference": "....MSISAM Database"
+                }
+            ]
+        },
+        {
+            "ext": "accdb",
+            "description": "Microsoft Access 2007 Database",
+            "signatures": [
+                {
+                    "hex": "00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42",
+                    "reference": "....Standard ACE DB"
+                }
+            ]
+        },
+        {
+            "ext": "mdb",
+            "description": "Microsoft Access Database",
+            "signatures": [
+                {
+                    "hex": "00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42",
+                    "reference": "....Standard Jet DB"
+                }
+            ]
+        },
+        {
+            "ext": "drw",
+            "description": "Micrografx vector graphic file",
+            "signatures": [
+                {
+                    "hex": "01 FF 02 04 03 02",
+                    "reference": ".\u00ff...."
+                }
+            ]
+        },
+        {
+            "ext": "dss",
+            "description": "Digital Speech Standard",
+            "signatures": [
+                {
+                    "hex": "02 64 73 73",
+                    "reference": "Version 2"
+                },
+                {
+                    "hex": "03 64 73 73",
+                    "reference": "Version 3"
+                }
+            ]
+        },
+        {
+            "ext": "adx",
+            "description": "Approach index file",
+            "signatures": [
+                {
+                    "hex": "03 00 00 00 41 50 50 52",
+                    "reference": "....APPR"
+                }
+            ]
+        },
+        {
+            "ext": "indd",
+            "description": "Adobe InDesign document",
+            "signatures": [
+                {
+                    "hex": "06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D",
+                    "reference": "..\u00ed\u00f5\u00d8.F\u00e5\u00bd1\u00ef\u00e7\u00fet\u00b7."
+                }
+            ]
+        },
+        {
+            "ext": "dtd",
+            "description": "DesignTools 2D Design file",
+            "signatures": [
+                {
+                    "hex": "07 64 74 32 64 64 74 64",
+                    "reference": ".dt2ddtd"
+                }
+            ]
+        },
+        {
+            "ext": "wallet",
+            "description": "MultiBit Bitcoin wallet file",
+            "signatures": [
+                {
+                    "hex": "0A 16 6F 72 67 2E 62 69 74 63 6F 69 6E 2E 70 72",
+                    "reference": "..org.bitcoin.pr"
+                }
+            ]
+        },
+        {
+            "ext": "nri",
+            "description": "Nero CD Compilation",
+            "signatures": [
+                {
+                    "hex": "0E 4E 65 72 6F 49 53 4F",
+                    "reference": ".NeroISO"
+                }
+            ]
+        },
+        {
+            "ext": "wks",
+            "description": "DeskMate Worksheet",
+            "signatures": [
+                {
+                    "hex": "0E 57 4B 53",
+                    "reference": ".WKS"
+                }
+            ]
+        },
+        {
+            "ext": "sib",
+            "description": "Sibelius Music - Score file",
+            "signatures": [
+                {
+                    "hex": "0F 53 49 42 45 4C 49 55 53",
+                    "reference": ".SIBELIUS"
+                }
+            ]
+        },
+        {
+            "ext": "dsp",
+            "description": "Microsoft Developer Studio project file",
+            "signatures": [
+                {
+                    "hex": "23 20 4D 69 63 72 6F 73 6F 66 74 20 44 65 76 65 6C 6F 70 65 72 20 53 74 75 64 69 6F",
+                    "reference": "# Microsoft Developer Studio"
+                }
+            ]
+        },
+        {
+            "ext": "amr",
+            "description": "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec",
+            "signatures": [
+                {
+                    "hex": "23 21 41 4D 52",
+                    "reference": "#!AMR"
+                }
+            ]
+        },
+        {
+            "ext": "sil",
+            "description": "Audio compression format developed by Skype",
+            "signatures": [
+                {
+                    "hex": "23 21 53 49 4C 4B 0A",
+                    "reference": "#!SILK."
+                }
+            ]
+        },
+        {
+            "ext": "hdr",
+            "description": "Radiance High Dynamic Range image file",
+            "signatures": [
+                {
+                    "hex": "23 3F 52 41 44 49 41 4E 43 45 0A",
+                    "reference": "#?RADIANCE."
+                }
+            ]
+        },
+        {
+            "ext": "vbe",
+            "description": "VBScript Encoded script",
+            "signatures": [
+                {
+                    "hex": "23 40 7E 5E",
+                    "reference": "#@~^"
+                }
+            ]
+        },
+        {
+            "ext": "cdb",
+            "description": "MikroTik WinBox Connection Database",
+            "signatures": [
+                {
+                    "hex": "0D F0 1D C0",
+                    "reference": "\u240d\u00f0 \u00c0"
+                }
+            ]
+        },
+        {
+            "ext": "pl",
+            "description": "Interleaf PrinterLeaf / WorldView document format",
+            "signatures": [
+                {
+                    "hex": "D0 4F 50 53",
+                    "reference": "\u00d0OPS"
+                }
+            ]
+        }
+    ]
+}
