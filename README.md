@@ -43,6 +43,43 @@ magik_monkee is a Python-based tool designed for testing file upload vulnerabili
 
         python magik_monkee.py -l
 
+## Database Manager Submodule
+The magik_monkee repository now includes a useful submodule called `db_manager.py` that allows you to manage the JSON-based database used by the tool. This submodule provides the following functionalities:
+
+    usage: db_manager.py [-h] [-a] [-i INFO] [-l] [-n] [-u] [database]
+    
+    positional arguments:
+      database              database file path
+    
+    options:
+      -h, --help            show this help message and exit
+      -a, --add             add a new signature to an extension in the database
+      -i INFO, --info INFO  get detailed information on the selected extensions
+      -l, --list            list all extensions currently available in the database selected
+      -n, --new             generate a new empty database file
+      -u, --update          update the database file
+
+### Usage
+1.  To add a new signature to an extension in the database:
+   
+        python db_manager.py -a -e <extension> -s <signature> 
+    
+2.  To get detailed information about an extension in the database:
+    
+        python db_manager.py -i -e <extension> 
+    
+3.  To list all available extensions in the database:
+    
+        python db_manager.py -l 
+    
+4.  To generate a new empty database file:
+    
+        python db_manager.py -n 
+    
+6.  To update the database file with any changes made:
+
+        python db_manager.py -u
+
 ## Contributing
 
 Contributions to magik_monkee are welcome! If you find any bugs, have feature requests, or want to improve the tool, feel free to open an issue or submit a pull request.
