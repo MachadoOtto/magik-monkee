@@ -95,7 +95,8 @@ def newDatabase(database):
 # Update the database file from the magik_monkee repository
 def updateDatabase(database):
 	print('[' + BLUE + 'INFO' + NOCOLOR + ']: Updating database file...')
-	os.system('wget https://raw.githubusercontent.com/MachadoOtto/magik-monkee/main/mgk_num_db.json -O ' + database)
+	# Using curl for Windows compatibility
+	os.system('curl https://raw.githubusercontent.com/MachadoOtto/magik-monkee/main/mgk_num_db.json -o ' + database)
 	print('[' + GREEN + 'OK' + NOCOLOR + ']: Database file updated!')
 
 # List all extensions currently available in the database selected
