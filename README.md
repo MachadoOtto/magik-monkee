@@ -16,13 +16,13 @@ magik_monkee is a Python-based tool designed for testing file upload vulnerabili
       file_source           source file to inject the magic bytes
     
     options:
-      -h, --help            			show this help message and exit
-      -d DATABASE, --database DATABASE	path to the database to be used
-      -e EXT, --ext EXT     			list of extensions to use
-      -i, --info            			get detailed information on the selected extensions
-      -l, --list            			list all extensions currently available in the database selected
-      -o OUTPUT, --output OUTPUT        name of the file to be generated
-      -x, --change-extension            change the output extension to the new one selected
+      -h, --help                          show this help message and exit
+      -d DATABASE, --database DATABASE    path to the database to be used
+      -e EXT, --ext EXT                   list of extensions to use
+      -i, --info                          get detailed information on the selected extensions
+      -l, --list                          list all extensions currently available in the database selected
+      -o OUTPUT, --output OUTPUT          name of the file to be generated
+      -x, --change-extension              change the output extension to the new one selected
 
 ## Getting Started
 1.  Clone the repository: `git clone https://github.com/MachadoOtto/magik-monkee.git`
