@@ -1,9 +1,9 @@
 
 # magik_monkee
-magik_monkee is a Python-based tool designed for testing file upload vulnerabilities in web applications. By leveraging a JSON-based database of "magic numbers" or file signatures, magik_monkee identifies and replaces the magic numbers of a selected file extension. This process generates a new file that retains the original content but adopts the magic numbers of the chosen extension. The tool proves invaluable in verifying file upload security, guarding against malicious uploads, and detecting potential bypasses in File Upload functionalities.
+magik_monkee is a Python-based tool designed for testing file upload vulnerabilities in web applications. By leveraging a JSON-based database of "magic bytes" or file signatures, magik_monkee identifies and replaces the magic bytes of a selected file extension. This process generates a new file that retains the original content but adopts the magic bytes of the chosen extension. The tool proves invaluable in verifying file upload security, guarding against malicious uploads, and detecting potential bypasses in File Upload functionalities.
 
 ## Features
--   Validate and modify magic numbers of uploaded files
+-   Validate and modify magic bytes of uploaded files
 -   JSON-based database for storing and managing file signatures
 -   Option to list available extensions in the database
 -   Ability to get detailed information on selected extensions
@@ -13,7 +13,7 @@ magik_monkee is a Python-based tool designed for testing file upload vulnerabili
     usage: magik_monkee.py [-h] [-d DATABASE] [-e EXT] [-i] [-l] [-o OUTPUT] [-x] [file_source]
 
     positional arguments:
-      file_source           source file to inject the magic numbers
+      file_source           source file to inject the magic bytes
     
     options:
       -h, --help            			show this help message and exit
@@ -28,10 +28,10 @@ magik_monkee is a Python-based tool designed for testing file upload vulnerabili
 1.  Clone the repository: `git clone https://github.com/MachadoOtto/magik-monkee.git`
 2.  Install Python 3 if not already installed.
 3.  Prepare your file with the content you want to upload and note its file extension.
-4.  Run magik_monkee using the appropriate command-line arguments to modify the magic numbers for the desired file extension.
+4.  Run magik_monkee using the appropriate command-line arguments to modify the magic bytes for the desired file extension.
 
 ## Examples
-1.  Basic usage to modify magic numbers for a PNG file:
+1.  Basic usage to modify magic bytes for a PNG file:
 
         python magik_monkee.py file_to_upload.png -e png
     
